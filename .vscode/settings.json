@@ -1,0 +1,6 @@
+// setting that makes sure to implement eslint on save
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  }
+}

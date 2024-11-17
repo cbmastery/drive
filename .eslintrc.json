@@ -1,3 +1,10 @@
+// all rules from installed packages are being followed
 {
-  "extends": ["next/core-web-vitals", "next/typescript"]
+  "extends": [
+    "next/core-web-vitals",
+    "next/typescript",
+    "standard",
+    "pluging:tailwindcss/recommended",
+    "prettier"
+  ]
 }
