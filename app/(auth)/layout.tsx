@@ -1,5 +1,5 @@
-import Image from "next/image";
 import React from "react";
+import Image from "next/image";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
@@ -38,8 +38,8 @@ const Layout = ({ children }: { children: React.ReactNode }) => {
             className="h-auto w-[200px] lg:w-[250px]"
           />
         </div>
+        {children}
       </section>
-      {children}{" "}
     </div>
   );
 };
