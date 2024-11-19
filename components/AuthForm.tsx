@@ -33,8 +33,8 @@ const authFormSchema = (formType: FormType) => {
 const AuthForm = ({ type }: { type: FormType }) => {
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState("");
-  const formSchema = authFormSchema(type);
 
+  const formSchema = authFormSchema(type);
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
@@ -105,6 +105,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
             disabled={isLoading}
           >
             {type === "sign-in" ? "Sign In" : "Sign Up"}
+
             {isLoading && (
               <Image
                 src="/assets/icons/loader.svg"
@@ -117,6 +118,7 @@ const AuthForm = ({ type }: { type: FormType }) => {
           </Button>
 
           {errorMessage && <p className="error-message">*{errorMessage}</p>}
+
           <div className="body-2 flex justify-center">
             <p className="text-light-100">
               {type === "sign-in"
